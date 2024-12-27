@@ -5,7 +5,7 @@ app = express();
 port = process.env.PORT || 3000;
 
 const mongoose = require('mongoose');
-const url = "mongodb://localhost:27017/technobitblogs";
+const url = process.env.MONGODB_URL;
 Note = require('./models/note/noteModel')
 
 // Connnect mongoose instance
