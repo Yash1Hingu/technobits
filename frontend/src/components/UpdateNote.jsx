@@ -15,7 +15,7 @@ const UpdateNote = () => {
         // Fetch the current note details
         const fetchNote = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/note/${noteId}`);
+                const response = await fetch(`https://technobitsapi.onrender.com/api/note/${noteId}`);
                 const data = await response.json();
                 setTitle(data.title);
                 setContent(data.content);
@@ -59,7 +59,7 @@ const UpdateNote = () => {
                 image: imageUrl, // Use the existing or newly uploaded image URL
             };
 
-            await fetch(`http://localhost:3000/api/note/${noteId}`, {
+            await fetch(`https://technobitsapi.onrender.com/api/note/${noteId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body),

@@ -17,7 +17,7 @@ const CreateNote = () => {
         formData.append('image', imageFile);
 
         try {
-            const response = await fetch('http://localhost:3000/api/upload-image', {
+            const response = await fetch('https://technobitsapi.onrender.com/api/upload-image', {
                 method: 'POST',
                 body: formData,
             });
@@ -40,7 +40,7 @@ const CreateNote = () => {
         }
 
         try {
-            await fetch('http://localhost:3000/api/notes', {
+            await fetch('https://technobitsapi.onrender.com/api/notes', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ title, content, image: imageUrl }), // Include the image URL

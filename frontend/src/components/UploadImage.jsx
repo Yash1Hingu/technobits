@@ -9,7 +9,7 @@ const UploadImage = () => {
         const formData = new FormData();
         formData.append('image', file);
 
-        fetch('http://localhost:3000/api/upload-image', {
+        fetch('https://technobitsapi.onrender.com/api/upload-image', {
             method: 'POST',
             body: formData,
         })

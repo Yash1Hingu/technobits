@@ -5,7 +5,7 @@ const NotesList = () => {
     const [notes, setNotes] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/notes')
+        fetch('https://technobitsapi.onrender.com/api/notes')
             .then((res) => res.json())
             .then((data) => setNotes(data))
             .catch((err) => console.error(err));

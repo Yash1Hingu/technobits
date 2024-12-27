@@ -7,14 +7,14 @@ const NoteDetails = () => {
     const [note, setNote] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/api/note/${noteId}`)
+        fetch(`https://technobitsapi.onrender.com/api/note/${noteId}`)
             .then((res) => res.json())
             .then((data) => setNote(data))
             .catch((err) => console.error(err));
     }, [noteId]);
 
     const handleDelete = () => {
-        fetch(`http://localhost:3000/api/note/${noteId}`, { method: 'DELETE' })
+        fetch(`https://technobitsapi.onrender.com/api/note/${noteId}`, { method: 'DELETE' })
             .then(() => navigate('/'))
             .catch((err) => console.error(err));
     };
